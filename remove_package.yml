@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: remove packages
+    apt:
+            name: pdns-server
+            state: absent

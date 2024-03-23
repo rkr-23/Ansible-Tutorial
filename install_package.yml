@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  become: true 
+  tasks: 
+
+  - name: install pdns
+    apt: 
+      name: pdns-server
+      state: latest
+
+  - name : install pdns backend
+    apt:
+       name: pdns-backend-mysql
+       state: latest
